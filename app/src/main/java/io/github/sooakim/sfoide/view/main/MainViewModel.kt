@@ -101,7 +101,7 @@ class MainViewModel(
                 seedGenerator,
                 _genderSubject,
                 BiFunction{ seed: String, gender: String -> Pair(seed, gender) }
-        ).share().replay(1).autoConnect()
+        ).replay(1).autoConnect()
 
         val refreshing = seedWithGender
                 .doOnNext { _isRefreshingSubject.onNext(true) }

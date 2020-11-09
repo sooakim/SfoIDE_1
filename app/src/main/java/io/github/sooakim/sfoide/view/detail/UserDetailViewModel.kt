@@ -60,7 +60,6 @@ class UserDetailViewModel(
 
     init {
         val user = Observable.just(user)
-                .share()
                 .replay(1)
                 .autoConnect()
 
